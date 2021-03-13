@@ -1,13 +1,173 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+.container{
+  margin-top:-50px;
+  
+  }
+  
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style: none;
+    color:#fff;
+   
+    
+  }
+  
+  li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+    color:#fff;
+    
+  }
+  span{
+    color: #46C2FF;
+  }
+  
+  .branco{
+    color:#fff;
+  }
+  li + li {
+    margin-top: 16px;
+    color:#fff;
+    
+  }
+  button{
+    background-color: transparent;
+    border:transparent;
+    outline: 0;
+  }
+  li svg {
+    color:#BD11FA;
+  
+    cursor: pointer;
+    margin-left: 17px;
+    width: 32px;
+    height: 20px;
+  
+  }
+  
+  .div-border{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #20202C;
+    box-shadow: 5px 4px 10px #000;
+    height: 60px;
+    width:420px;
+  margin-right:800px;
+    line-height: 70px;
+  
+  }
+  
+  .Blink{
+    background-color: red;
+    margin-top: -300px;
+    width: 100px;
+    height: 200px;
+    border-radius: 300px;
+    height: 100px;
+    margin-left: 700px;
+    animation: blinkingBackground 3s infinite;
+  }
+   @keyframes blinkingBackground{
+    0%		{ background-color: #000;}
+    25%		{ background-color: #fff;}
+    50%		{ background-color: #000;}
+    75%		{ background-color: #fff;}
+    100%	        { background-color: #000;}
+  } 
+  #bars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    height: 100px;
+    left: 52%;
+    margin: -100px  0 -100px;
+    position: absolute;
+    margin-top: 220px;
+    top: 50%;
+    width: 100px;
+   
+  
+  }
+  
+  .bar {
+    display: flex;
+  
+   background: #BD11FA;
+    bottom: 1px;
+    height: 80px;
+    position: absolute;
+    width: 12px;  
+   
+    animation: sound 0ms -800ms linear infinite alternate;
+  }
+  
+  @keyframes sound {
+    0% {
+       opacity: .35;
+        height: 20px;
+        
+        
+    }
+    100% {
+        opacity: 1;       
+        height: 120px;        
+    }
+  }
+  
+  
+  .bar:nth-child(1)  { left: 0px; animation-duration: 474ms; }
+  .bar:nth-child(2)  { left: 15px; animation-duration: 433ms; }
+  .bar:nth-child(3)  { left: 30px; animation-duration: 407ms; }
+  .bar:nth-child(4)  { left: 45px; animation-duration: 458ms; }
+  .bar:nth-child(5)  { left: 60px; animation-duration: 400ms; }
+  .bar:nth-child(6)  { left: 75px; animation-duration: 427ms; }
+  .bar:nth-child(7)  { left: 90px; animation-duration: 441ms; }
+  .bar:nth-child(8)  { left: 105px; animation-duration: 419ms; }
+  .bar:nth-child(9)  { left: 120px; animation-duration: 487ms; }
+  .bar:nth-child(10) { left:135px; animation-duration: 520ms; }
+  .bar:nth-child(11) { left: 150px; animation-duration: 560ms; }
+  .bar:nth-child(12) { left: 165px; animation-duration: 580ms; }
+  .bar:nth-child(13) { left: 180px; animation-duration: 590ms; }
+  .bar:nth-child(14) { left: 195px; animation-duration: 620ms; }
+  .bar:nth-child(15) { left: 210px; animation-duration: 442ms; }
+  .bar:nth-child(16) { left: 225px; animation-duration: 620ms; }
+  .bar:nth-child(17) { left:240px; animation-duration: 442ms; }
+  .bar:nth-child(18) { left:255px; animation-duration: 620ms; }
+  .bar:nth-child(19) { left: 270px; animation-duration: 442ms; }
+  .bar:nth-child(20) { left: 285px; animation-duration: 620ms; }
+  .bar:nth-child(21) { left: 300px; animation-duration: 442ms; }
+  .bar:nth-child(22) { left: 285px; animation-duration: 620ms; }
+  .bar:nth-child(23) { left: 300px; animation-duration: 442ms; }
+  .bar:nth-child(24) { left: 315px; animation-duration: 620ms; }
+  .bar:nth-child(25) { left: 330px; animation-duration: 442ms; }
+  
+  .rock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-family: 'New Rocker';
+  margin-top: -500px;
+  margin-left: 660px;
+    width: 500px;
+    height: 100px;
+    
+  }
+  h1{
+    font-family: 'New Rocker';
+  }
+  .rockroll{
+  height: 70px;
+    width: 300px;
+  }

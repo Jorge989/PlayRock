@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+html{
+  width: 100%;
+  background-image: url("./assets/2.png");
+  background-repeat: no-repeat;
+
+}
 
 .App-logo {
   height: 40vmin;
