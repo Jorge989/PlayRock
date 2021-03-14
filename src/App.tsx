@@ -9,7 +9,6 @@ import Rock from "./assets/rok2.png";
 import { useSpring, animated } from "react-spring";
 import "./App.css";
 
-
 const API_HOST = "https://rockerback.herokuapp.com/";
 
 interface IMusic {
@@ -63,7 +62,7 @@ function App() {
   );
   const handlePlay2 = useCallback(
     (music: IMusic) => {
-      setSelectedMusic('')
+      setSelectedMusic("");
       if (audio) {
         audio.src = music.url;
 
@@ -104,7 +103,7 @@ function App() {
   const [passwordShown, setPasswordShown] = useState(true);
   const togglePasswordVisiblity = () => {
     setPasswordShown(selectMusic === "" ? false : true);
-  }
+  };
   return (
     <div className="container">
       {!musics.length ? (
@@ -115,30 +114,38 @@ function App() {
 
           <ul>
             {musics.map((music, index) => (
-              <div className="div-border">
-                <li key={music.name + index}>
+              <div key={music.name + index} className="div-border">
+                <li>
                   <span>
                     {music.artist} -{" "}
                     <span className="branco">{music.name}</span>
                   </span>
-                  <button onClick={togglePasswordVisiblity} type="button" className="eye">
-        {passwordShown ?  <FaPlay
-                    onClick={() => {
-                      setIsShow(!isShow);
-                      setSelectedMusic(music.name)
-                      handlePlay(music);
-                    }}
-                    cursor="pointer"
-                    color="#BD11FA"
-                  />:  <FaStop
-                  onClick={() => {
-                    setIsShow(false);
-                    handlePlay2(music);
-                  }}
-                  cursor="pointer"
-                  color="#BD11FA"
-                />}
-      </button>
+                  <button
+                    onClick={togglePasswordVisiblity}
+                    type="button"
+                    className="eye"
+                  >
+                    {!passwordShown && music.name === selectMusic ? (
+                      <FaStop
+                        onClick={() => {
+                          setIsShow(false);
+                          handlePlay2(music);
+                        }}
+                        cursor="pointer"
+                        color="#BD11FA"
+                      />
+                    ) : (
+                      <FaPlay
+                        onClick={() => {
+                          setIsShow(!isShow);
+                          setSelectedMusic(music.name);
+                          handlePlay(music);
+                        }}
+                        cursor="pointer"
+                        color="#BD11FA"
+                      />
+                    )}
+                  </button>
                   {/* <FaPlay
                     onClick={() => {
                       setIsShow(!isShow);
