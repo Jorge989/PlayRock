@@ -1,12 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
-import GoogleFontLoader from "react-google-font-loader";
-import guitar from "./assets/guitar4.png";
-import playIcon from "./play-icon.svg";
+
 import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa";
 import Rock from "./assets/rok2.png";
-import { useSpring, animated } from "react-spring";
+
 import "./App.css";
 
 const API_HOST = "https://rockerback.herokuapp.com/";
@@ -159,7 +157,7 @@ function App() {
             ))}
           </ul>
           <div className="rock">
-            <img src={Rock} className="rockroll" />
+            <img src={Rock} className="rockroll" alt="rock" />
           </div>
         </>
       )}
