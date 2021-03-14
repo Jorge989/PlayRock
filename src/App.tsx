@@ -79,24 +79,7 @@ function App() {
     [audio]
   );
   console.log(audio);
-  const Modal = {
-    acitve() {
-      const modalElements = document?.querySelector(".bar") as HTMLDivElement;
 
-      if (modalElements) {
-        modalElements.classList.add("bar");
-      }
-    },
-    unactive() {
-      const modalElements = document?.querySelector(
-        ".removed"
-      ) as HTMLDivElement;
-
-      if (modalElements) {
-        modalElements.classList.remove("removed");
-      }
-    },
-  };
   const [isShow, setIsShow] = useState(false);
   const [passwordShown, setPasswordShown] = useState(true);
   const togglePasswordVisiblity = () => {
